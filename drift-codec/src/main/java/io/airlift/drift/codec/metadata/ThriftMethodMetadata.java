@@ -79,11 +79,12 @@ public class ThriftMethodMetadata
 
         checkArgument(!Modifier.isStatic(method.getModifiers()), "Method %s is static", method.toGenericString());
 
+        String className = method.getDeclaringClass().getName();
         if (thriftMethod.value().isEmpty()) {
-            name = method.getName();
+            this.name = className + ":" + method.getName();
         }
         else {
-            name = thriftMethod.value();
+            this.name = className + ":" + thriftMethod.value();
         }
 
         returnType = catalog.getThriftType(method.getGenericReturnType());

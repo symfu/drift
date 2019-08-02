@@ -23,6 +23,17 @@
         <tag>1.18</tag>
     </scm>
 
+    <distributionManagement>
+        <repository>
+            <id>rdc-releases</id>
+            <url>https://repo.rdc.aliyun.com/repository/67568-release-O22uig/</url>
+        </repository>
+        <snapshotRepository>
+            <id>rdc-snapshots</id>
+            <url>https://repo.rdc.aliyun.com/repository/67568-snapshot-PHApvr/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <modules>
         <module>drift-api</module>
         <module>drift-protocol</module>
